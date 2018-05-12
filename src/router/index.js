@@ -8,7 +8,10 @@ import Home from '@/components/Home'
 import Welcome from '@/components/Welcome'
 // 导入用户列表组件
 import Users from '@/components/user/Users'
-
+// 导入权限列表组件
+import Rights from '@/components/power/Rights'
+// 导入角色列表组件
+import Roles from '@/components/power/Roles'
 Vue.use(Router)
 
 export default new Router({
@@ -31,7 +34,9 @@ export default new Router({
         // 注意：只要是 children 属性，匹配到的 子路由，这些即将要展示的子路由对应的组件，必须替换到 父组件的 router-view 中
         // 子路由，今后，所有的功能页面，都放到了 Home 的子路由中进行展示
         { path: '/welcome', component: Welcome },
-        { path: '/users', component: Users }
+        { path: '/users', component: Users },
+        { path: '/rights', component: Rights },
+        { path: '/roles', component: Roles }
       ]
     }
   ]
