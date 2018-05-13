@@ -85,7 +85,7 @@ export default {
 
       // console.log(scope.row)
       this.getLeafKeys(scope.row, this.defaultCheckedKeys)
-      console.log(this.defaultCheckedKeys)
+      // console.log(this.defaultCheckedKeys)
 
       this.setRoleDialogVisible = true
     },

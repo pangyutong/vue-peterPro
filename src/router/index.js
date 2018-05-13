@@ -12,6 +12,15 @@ import Users from '@/components/user/Users'
 import Rights from '@/components/power/Rights'
 // 导入角色列表组件
 import Roles from '@/components/power/Roles'
+
+// 导入商品列表组件
+import Goods from '@/components/goods/Goods'
+
+// 导入商品分类组件
+import Categories from '@/components/goods/Categories'
+
+// 导入商品参数组件
+import Params from '@/components/goods/Params'
 Vue.use(Router)
 
 export default new Router({
@@ -36,7 +45,10 @@ export default new Router({
         { path: '/welcome', component: Welcome },
         { path: '/users', component: Users },
         { path: '/rights', component: Rights },
-        { path: '/roles', component: Roles }
+        { path: '/roles', component: Roles },
+        { path: '/goods', component: Goods },
+        { path: '/categories', component: Categories },
+        { path: '/params', component: Params }
       ]
     }
   ]

@@ -22,7 +22,7 @@ export default {
       const { data: res } = await this.$http.get('menus')
       if (res.meta.status !== 200) return this.$message.error('请求菜单列表失败！')
       this.menus = res.data
-      console.log(res.data)
+      // console.log(res.data)
     }
   }
 }
