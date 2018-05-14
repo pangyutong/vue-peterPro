@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  import mix from "./Params-mixins.js"
-  export default {
-    mixins:[mix]
-  }
+import mix from './Params-mixins.js'
+export default {
+  mixins: [mix]
+}
 </script>
 <style lang="less" scoped>
 

@@ -15,14 +15,23 @@ import Roles from '@/components/power/Roles'
 
 // 导入商品列表组件
 import Goods from '@/components/goods/Goods'
+// 导入商品列表组件
+import List from '@/components/goods/List'
+// 导入添加商品列表编辑组件
+import Add from '@/components/goods/Add'
 
 // 导入商品分类组件
 import Categories from '@/components/goods/Categories'
 
 // 导入商品参数组件
 import Params from '@/components/goods/Params'
-Vue.use(Router)
 
+// 导入订单管理组件
+import Orders from '@/components/order/Orders'
+
+// 导入数据统计组件
+import Reports from '@/components/report/Reports'
+Vue.use(Router)
 export default new Router({
   routes: [
     {
@@ -46,9 +55,22 @@ export default new Router({
         { path: '/users', component: Users },
         { path: '/rights', component: Rights },
         { path: '/roles', component: Roles },
-        { path: '/goods', component: Goods },
         { path: '/categories', component: Categories },
-        { path: '/params', component: Params }
+        { path: '/params', component: Params },
+        {path: '/goods',
+          component: Goods,
+          redirect: '/list',
+          children: [
+            {path: '/add', component: Add},
+            {path: '/list', component: List}
+          ]
+        },
+        {
+          path: '/orders', component: Orders
+        },
+        {
+          path: '/reports', component: Reports
+        }
       ]
     }
   ]
