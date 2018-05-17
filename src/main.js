@@ -48,6 +48,33 @@ axios.interceptors.request.use(
   }
 )
 
+// 注册
+Vue.filter('dateFormat', function (originVal) {
+// 返回处理后的值
+  const dt = new Date(originVal)
+  const y = dt.getFullYear()
+  const m = (dt.getMonth() + 1).toString().padStart(2, '0')
+  const d = dt
+    .getDate()
+    .toString()
+    .padStart(2, '0')
+
+  const hh = dt
+    .getHours()
+    .toString()
+    .padStart(2, '0')
+  const mm = dt
+    .getMinutes()
+    .toString()
+    .padStart(2, '0')
+  const ss = dt
+    .getSeconds()
+    .toString()
+    .padStart(2, '0')
+
+  return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
