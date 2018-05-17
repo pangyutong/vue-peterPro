@@ -6,7 +6,9 @@
       <el-breadcrumb-item>商品管理</el-breadcrumb-item>
       <el-breadcrumb-item>商品列表</el-breadcrumb-item>
     </el-breadcrumb>
-    <router-view></router-view>
+    <el-card>
+      <router-view></router-view>
+    </el-card>
   </div>
 </template>
 

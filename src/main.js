@@ -4,6 +4,8 @@ import App from './App'
 import router from './router'
 // 导入 axios 发起Ajax请求
 import axios from 'axios'
+// 导入 树形表格 组件
+import TreeGrid from 'vue-table-with-tree-grid'
 
 // 导入全局样式表
 import './assets/css/global.css'
@@ -13,6 +15,9 @@ import './assets/fonts/iconfont.css'
 // 导入和安装 ElementUI 组件库
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
+
+// 把 树形表格，注册为全局的组件
+Vue.component('tree-grid', TreeGrid)
 
 // 添加路由导航守卫，只有登录的情况，才允许访问有权限的页面；否则，跳转到登录
 router.beforeEach((to, from, next) => {

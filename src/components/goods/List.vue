@@ -10,7 +10,7 @@
           </el-input>
         </el-col>
         <el-col :span="3">
-          <el-button type="primary" @click="handleToAdd">添加商品</el-button>
+          <el-button type="primary" @click="$router.push('/add')">添加商品</el-button>
         </el-col>
       </el-row>
        <!-- 商品列表 -->
@@ -51,8 +51,8 @@
           <template slot-scope="scope">
             <!-- 编辑按钮 @click="showEditDialog(scope)"-->
             <el-button type="primary" icon="el-icon-edit" size="mini" ></el-button>
-            <!-- 删除按钮 @click="removeGood(scope)"-->
-            <el-button type="danger" icon="el-icon-delete" size="mini" ></el-button>
+            <!-- 删除按钮 -->
+            <el-button type="danger" icon="el-icon-delete" size="mini" @click="removeGood(scope)"></el-button>
           </template>
         </el-table-column>
       </el-table>
